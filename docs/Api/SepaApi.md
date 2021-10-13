@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**sepaOperations**](SepaApi.md#sepaoperations) | **POST** /v1/sepa/operations | Send SEPA operations
 
 # **addDocument**
-> \Swagger\Client\Model\InlineResponse20026 addDocument($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20027 addDocument($paycomet_api_token, $body)
 
 Adds a SEPA document
 
@@ -20,19 +20,14 @@ add_document
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\SepaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body30(); // \Swagger\Client\Model\Body30 | 
+$body = new \Swagger\Client\Model\SepaAdddocumentBody(); // \Swagger\Client\Model\SepaAdddocumentBody | 
 
 try {
     $result = $apiInstance->addDocument($paycomet_api_token, $body);
@@ -48,15 +43,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body30**](../Model/Body30.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\SepaAdddocumentBody**](../Model/SepaAdddocumentBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
+[**\Swagger\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkCustomer**
-> \Swagger\Client\Model\InlineResponse20027 checkCustomer($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20028 checkCustomer($paycomet_api_token, $body)
 
 Check a customers SEPA documentation
 
@@ -76,19 +71,14 @@ check_customer
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\SepaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body32(); // \Swagger\Client\Model\Body32 | 
+$body = new \Swagger\Client\Model\SepaCheckcustomerBody(); // \Swagger\Client\Model\SepaCheckcustomerBody | 
 
 try {
     $result = $apiInstance->checkCustomer($paycomet_api_token, $body);
@@ -104,15 +94,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body32**](../Model/Body32.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\SepaCheckcustomerBody**](../Model/SepaCheckcustomerBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
+[**\Swagger\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -122,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkDocument**
-> \Swagger\Client\Model\InlineResponse20026 checkDocument($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20027 checkDocument($paycomet_api_token, $body)
 
 Check a SEPA document
 
@@ -132,19 +122,14 @@ check_document
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\SepaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body31(); // \Swagger\Client\Model\Body31 | 
+$body = new \Swagger\Client\Model\SepaCheckdocumentBody(); // \Swagger\Client\Model\SepaCheckdocumentBody | 
 
 try {
     $result = $apiInstance->checkDocument($paycomet_api_token, $body);
@@ -160,15 +145,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body31**](../Model/Body31.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\SepaCheckdocumentBody**](../Model/SepaCheckdocumentBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
+[**\Swagger\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -178,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sepaOperations**
-> \Swagger\Client\Model\InlineResponse20028 sepaOperations($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20029 sepaOperations($paycomet_api_token, $body)
 
 Send SEPA operations
 
@@ -188,19 +173,14 @@ sepa_operations
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\SepaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body33(); // \Swagger\Client\Model\Body33 | 
+$body = new \Swagger\Client\Model\SepaOperationsBody(); // \Swagger\Client\Model\SepaOperationsBody | 
 
 try {
     $result = $apiInstance->sepaOperations($paycomet_api_token, $body);
@@ -216,15 +196,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body33**](../Model/Body33.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\SepaOperationsBody**](../Model/SepaOperationsBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\Swagger\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 

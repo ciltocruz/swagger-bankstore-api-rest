@@ -17,18 +17,13 @@ info_error
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\ErrorApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\Body(); // \Swagger\Client\Model\Body | 
+$body = new \Swagger\Client\Model\V1ErrorsBody(); // \Swagger\Client\Model\V1ErrorsBody | 
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Query privilege required)
 
 try {
@@ -44,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body**](../Model/Body.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\V1ErrorsBody**](../Model/V1ErrorsBody.md)|  | [optional]
  **paycomet_api_token** | **string**| PAYCOMET API key (Query privilege required) | [optional]
 
 ### Return type
@@ -53,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 

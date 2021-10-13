@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**dccPurchaseCreate**](DccApi.md#dccpurchasecreate) | **POST** /v1/payments/dcc | Create an DCC payment
 
 # **dccPurchaseConfirm**
-> \Swagger\Client\Model\InlineResponse20023 dccPurchaseConfirm($paycomet_api_token, $order, $body)
+> \Swagger\Client\Model\InlineResponse20024 dccPurchaseConfirm($paycomet_api_token, $order, $body)
 
 Confirm previous DCC payment
 
@@ -18,20 +18,15 @@ confirm_purchase_dcc
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\DccApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
 $order = "order_example"; // string | 
-$body = new \Swagger\Client\Model\Body25(); // \Swagger\Client\Model\Body25 | 
+$body = new \Swagger\Client\Model\OrderConfirmBody(); // \Swagger\Client\Model\OrderConfirmBody | 
 
 try {
     $result = $apiInstance->dccPurchaseConfirm($paycomet_api_token, $order, $body);
@@ -48,15 +43,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
  **order** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body25**](../Model/Body25.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\OrderConfirmBody**](../Model/OrderConfirmBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\Swagger\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **dccPurchaseCreate**
-> \Swagger\Client\Model\InlineResponse20022 dccPurchaseCreate($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20023 dccPurchaseCreate($paycomet_api_token, $body)
 
 Create an DCC payment
 
@@ -76,19 +71,14 @@ execute_purchase_dcc
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\DccApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body24(); // \Swagger\Client\Model\Body24 | 
+$body = new \Swagger\Client\Model\PaymentsDccBody(); // \Swagger\Client\Model\PaymentsDccBody | 
 
 try {
     $result = $apiInstance->dccPurchaseCreate($paycomet_api_token, $body);
@@ -104,15 +94,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body24**](../Model/Body24.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\PaymentsDccBody**](../Model/PaymentsDccBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\Swagger\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 

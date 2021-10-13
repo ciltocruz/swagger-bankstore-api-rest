@@ -15,24 +15,19 @@ Method | HTTP request | Description
 
 Tokenizes a card. Either card number and CVC2 or jetToken are required. For you to send directly the card data you should be PCI certified or the accepting the requirement to submit quarterly SAQ-AEP and get ASV scans. For most users is strongly recommended getting the jetToken with JETIFRAME or using GET integration to register the cards instead of REST.
 
-add_user
+This method supposes the registration of the card in PAYCOMET, it is not valid for subsequent charges with the exception of MIT. To register the card against the processor for subsequent recurring charges, it is necessary to charge for a secure environment, regardless of the amount.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\Body1(); // \Swagger\Client\Model\Body1 | 
+$body = new \Swagger\Client\Model\V1CardsBody(); // \Swagger\Client\Model\V1CardsBody | 
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Token actions privilege required)
 
 try {
@@ -48,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body1**](../Model/Body1.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\V1CardsBody**](../Model/V1CardsBody.md)|  | [optional]
  **paycomet_api_token** | **string**| PAYCOMET API key (Token actions privilege required) | [optional]
 
 ### Return type
@@ -57,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -77,18 +72,13 @@ edit_user
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\Body4(); // \Swagger\Client\Model\Body4 | 
+$body = new \Swagger\Client\Model\CardsEditBody(); // \Swagger\Client\Model\CardsEditBody | 
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Token actions privilege required)
 
 try {
@@ -104,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body4**](../Model/Body4.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\CardsEditBody**](../Model/CardsEditBody.md)|  | [optional]
  **paycomet_api_token** | **string**| PAYCOMET API key (Token actions privilege required) | [optional]
 
 ### Return type
@@ -113,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -133,18 +123,13 @@ Info about an user card.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\Body2(); // \Swagger\Client\Model\Body2 | 
+$body = new \Swagger\Client\Model\CardsInfoBody(); // \Swagger\Client\Model\CardsInfoBody | 
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Query privilege required)
 
 try {
@@ -160,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body2**](../Model/Body2.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\CardsInfoBody**](../Model/CardsInfoBody.md)|  | [optional]
  **paycomet_api_token** | **string**| PAYCOMET API key (Query privilege required) | [optional]
 
 ### Return type
@@ -169,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -189,18 +174,13 @@ cards_physical
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\Body5(); // \Swagger\Client\Model\Body5 | 
+$body = new \Swagger\Client\Model\CardsPhysicalBody(); // \Swagger\Client\Model\CardsPhysicalBody | 
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Token actions privilege required)
 
 try {
@@ -216,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body5**](../Model/Body5.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\CardsPhysicalBody**](../Model/CardsPhysicalBody.md)|  | [optional]
  **paycomet_api_token** | **string**| PAYCOMET API key (Token actions privilege required) | [optional]
 
 ### Return type
@@ -225,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -245,18 +225,13 @@ Deletes the user.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\Body3(); // \Swagger\Client\Model\Body3 | 
+$body = new \Swagger\Client\Model\CardsDeleteBody(); // \Swagger\Client\Model\CardsDeleteBody | 
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Token actions privilege required)
 
 try {
@@ -272,7 +247,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body3**](../Model/Body3.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\CardsDeleteBody**](../Model/CardsDeleteBody.md)|  | [optional]
  **paycomet_api_token** | **string**| PAYCOMET API key (Token actions privilege required) | [optional]
 
 ### Return type
@@ -281,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 

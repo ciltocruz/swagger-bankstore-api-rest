@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**transferReversal**](MarketplaceApi.md#transferreversal) | **POST** /v1/marketplace/transfer-reversal | Make a transfer reversal based on a previous transfer
 
 # **splitTransfer**
-> \Swagger\Client\Model\InlineResponse20024 splitTransfer($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20025 splitTransfer($paycomet_api_token, $body)
 
 Make a transfer to other accounts on PAYCOMET
 
@@ -20,19 +20,14 @@ Make a deposit in a destination account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\MarketplaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body26(); // \Swagger\Client\Model\Body26 | 
+$body = new \Swagger\Client\Model\MarketplaceSplittransferBody(); // \Swagger\Client\Model\MarketplaceSplittransferBody | 
 
 try {
     $result = $apiInstance->splitTransfer($paycomet_api_token, $body);
@@ -48,15 +43,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body26**](../Model/Body26.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\MarketplaceSplittransferBody**](../Model/MarketplaceSplittransferBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\Swagger\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **splitTransferReversal**
-> \Swagger\Client\Model\InlineResponse20024 splitTransferReversal($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20025 splitTransferReversal($paycomet_api_token, $body)
 
 Run a split transfer reversal based on a previous split transfer
 
@@ -76,19 +71,14 @@ Make a split transfer reversal request
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\MarketplaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body27(); // \Swagger\Client\Model\Body27 | 
+$body = new \Swagger\Client\Model\MarketplaceSplittransferreversalBody(); // \Swagger\Client\Model\MarketplaceSplittransferreversalBody | 
 
 try {
     $result = $apiInstance->splitTransferReversal($paycomet_api_token, $body);
@@ -104,15 +94,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body27**](../Model/Body27.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\MarketplaceSplittransferreversalBody**](../Model/MarketplaceSplittransferreversalBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\Swagger\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -122,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transfer**
-> \Swagger\Client\Model\InlineResponse20025 transfer($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20026 transfer($paycomet_api_token, $body)
 
 Run a transfer
 
@@ -132,19 +122,14 @@ Run a transfer in a destination account
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\MarketplaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body28(); // \Swagger\Client\Model\Body28 | 
+$body = new \Swagger\Client\Model\MarketplaceTransferBody(); // \Swagger\Client\Model\MarketplaceTransferBody | 
 
 try {
     $result = $apiInstance->transfer($paycomet_api_token, $body);
@@ -160,15 +145,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body28**](../Model/Body28.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\MarketplaceTransferBody**](../Model/MarketplaceTransferBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\Swagger\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
@@ -178,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transferReversal**
-> \Swagger\Client\Model\InlineResponse20025 transferReversal($paycomet_api_token, $body)
+> \Swagger\Client\Model\InlineResponse20026 transferReversal($paycomet_api_token, $body)
 
 Make a transfer reversal based on a previous transfer
 
@@ -188,19 +173,14 @@ Make a transfer reversal based on a previous transfer
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\MarketplaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Authorization privilege required)
-$body = new \Swagger\Client\Model\Body29(); // \Swagger\Client\Model\Body29 | 
+$body = new \Swagger\Client\Model\MarketplaceTransferreversalBody(); // \Swagger\Client\Model\MarketplaceTransferreversalBody | 
 
 try {
     $result = $apiInstance->transferReversal($paycomet_api_token, $body);
@@ -216,15 +196,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Authorization privilege required) |
- **body** | [**\Swagger\Client\Model\Body29**](../Model/Body29.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\MarketplaceTransferreversalBody**](../Model/MarketplaceTransferreversalBody.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\Swagger\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 

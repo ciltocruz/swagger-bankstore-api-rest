@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **active** | **string** |  | [optional] 
+**allow_api_refunds** | **int** |  | [optional] 
 **logo_square** | **string** | encoded image of squared logo in base64 format | [optional] 
 **logo_landscape** | **string** | encoded image of landscape logo in base64 format | [optional] 
 

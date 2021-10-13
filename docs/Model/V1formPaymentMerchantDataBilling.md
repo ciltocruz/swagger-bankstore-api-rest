@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **bill_addr_line2** | **string** | Delivery address, line 2 | [optional] 
 **bill_addr_line3** | **string** | Delivery address, line 3 | [optional] 
 **bill_addr_post_code** | **string** | Post code of the delivery address | [optional] 
-**bill_addr_state** | **string** | State or province of the delivery address | [optional] 
+**bill_addr_state** | **string** | State or province of the delivery address. Must comply with ISO 3166-2. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

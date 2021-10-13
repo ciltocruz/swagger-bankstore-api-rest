@@ -17,20 +17,15 @@ execute_refund
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\RefundApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Refund privilege required)
 $order = "order_example"; // string | 
-$body = new \Swagger\Client\Model\Body14(); // \Swagger\Client\Model\Body14 | 
+$body = new \Swagger\Client\Model\OrderRefundBody(); // \Swagger\Client\Model\OrderRefundBody | 
 
 try {
     $result = $apiInstance->executeRefund($paycomet_api_token, $order, $body);
@@ -47,7 +42,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Refund privilege required) |
  **order** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body14**](../Model/Body14.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\OrderRefundBody**](../Model/OrderRefundBody.md)|  | [optional]
 
 ### Return type
 
@@ -55,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 

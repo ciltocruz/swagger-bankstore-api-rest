@@ -17,19 +17,14 @@ nirakl_invoice_search
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: paycometApiKey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('PAYCOMET-API-TOKEN', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('PAYCOMET-API-TOKEN', 'Bearer');
 
 $apiInstance = new Swagger\Client\Api\MiraklApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $paycomet_api_token = "paycomet_api_token_example"; // string | PAYCOMET API key (Query privilege required)
-$body = new \Swagger\Client\Model\Body9(); // \Swagger\Client\Model\Body9 | 
+$body = new \Swagger\Client\Model\V1InvoicesBody(); // \Swagger\Client\Model\V1InvoicesBody | 
 
 try {
     $result = $apiInstance->miraklInvoicesSearch($paycomet_api_token, $body);
@@ -45,7 +40,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **paycomet_api_token** | **string**| PAYCOMET API key (Query privilege required) |
- **body** | [**\Swagger\Client\Model\Body9**](../Model/Body9.md)|  | [optional]
+ **body** | [**\Swagger\Client\Model\V1InvoicesBody**](../Model/V1InvoicesBody.md)|  | [optional]
 
 ### Return type
 
@@ -53,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[paycometApiKey](../../README.md#paycometApiKey)
+No authorization required
 
 ### HTTP request headers
 
